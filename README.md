@@ -11,6 +11,3 @@
 - **Tools Used**: Mentions the tools and technologies utilized in the project.
 - **Course Link**: Directs users to the full tutorial for further learning.
 - **License**: Specifies the licensing terms for the repository.
-
-Feel free to customize this template with your personal details and any additional information relevant to your project. Let me know if you need further assistance!
-::contentReference[oaicite:0]{index=0}
