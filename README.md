@@ -1,8 +1,8 @@
-````markdown
 # What I Learned — Git & GitHub Course (Apna College)
 
-**Author:** Maqsood Ahmad  
-**Repository:** Check [my-first-github-webpage](https://maqsoodkhan840.github.io/my-first-github-webpage/)
+**Author:** Maqsood Ahmad
+**Repository:** [Git-And-GitHub-Course](https://github.com/maqsoodkhan840/Git-And-GitHub-Course)
+**Repository:** Check[my-first-github-webpage](https://maqsoodkhan840.github.io/my-first-github-webpage/)
 
 ---
 
@@ -10,13 +10,14 @@
 
 1. **Version Control Fundamentals**
 
-   - Difference between Git (distributed VCS) and GitHub (remote hosting & collaboration).
-   - Benefits of version control: history, branching, collaboration.
+   - Difference between **Git** (distributed VCS) and **GitHub** (remote hosting & collaboration).
+   - Benefits: project history, branching, and team collaboration.
 
 2. **Setup & Configuration**
 
-   - Installed Git on my machine.
-   - Configured my identity:
+   - Installed Git locally.
+   - Configured identity:
+
      ```bash
      git config --global user.name "Maqsood Ahmad"
      git config --global user.email "you@example.com"
@@ -24,164 +25,158 @@
 
 3. **Core Git Workflow**
 
-   - Initialized repos (`git init`), cloned existing ones (`git clone`).
-   - Checked status (`git status`), staged changes (`git add`), and committed (`git commit`).
-   - Viewed history (`git log`, `git log --oneline`), inspected diffs (`git diff`).
+   - **Initialize** repositories (`git init`), **clone** existing (`git clone`).
+   - **Check status** (`git status`), **stage** changes (`git add`), **commit** (`git commit`).
+   - **View history** (`git log`, `git log --oneline`), **inspect diffs** (`git diff`).
 
 4. **Working with Remotes**
 
-   - Added remote origins (`git remote add origin <URL>`).
-   - Pushed local commits (`git push -u origin main`) and pulled updates (`git pull`).
+   - **Add remote** (`git remote add origin <URL>`).
+   - **Push** (`git push -u origin main`) and **pull** (`git pull origin main`).
 
 5. **Branching & Merging**
 
-   - Created branches (`git branch <name>`), switched (`git checkout <name>`), and merged (`git merge <branch>`).
-   - Resolved merge conflicts by editing files, staging, and committing.
+   - **Create** (`git branch <name>`), **switch** (`git checkout <name>`), **merge** (`git merge <branch>`).
+   - Handle merge conflicts by editing files, staging, and committing.
 
 6. **Undoing & Cleaning**
 
-   - Unstaged changes (`git restore --staged <file>`).
-   - Discarded working-directory changes (`git restore <file>`).
-   - Reset commits (`git reset HEAD~1`, `git reset --hard HEAD`).
-   - Reverted commits (`git revert <commit-hash>`).
+   - **Unstage** changes (`git restore --staged <file>`).
+   - **Discard** working-directory edits (`git restore <file>`).
+   - **Reset commits** (`git reset HEAD~1`, `git reset --hard HEAD`).
+   - **Revert** a commit (`git revert <commit-hash>`).
 
-7. **Collaboration on GitHub**
-   - Forked repos, created pull requests, participated in code reviews.
-   - Best practices: small, meaningful commits; branch per feature; sync frequently.
+7. **GitHub Collaboration**
+
+   - **Fork** repositories, create **pull requests**, and perform **code reviews**.
+   - Best practices: small, focused commits; feature branches; sync frequently.
 
 ---
 
 ## 📥 Official Resources
 
-- **Apna College PDF Notes**  
-  Download the full course notes:  
-  [https://www.apnacollege.in/notes?utm_source=chatgpt.com](https://www.apnacollege.in/notes?utm_source=chatgpt.com)
-- **Official Git Cheat Sheet (PDF)**  
-  [Download Git Cheat Sheet by Apna College](https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/publicFiles/git-cheat-sheet-education.pdf)
+- **Apna College PDF Notes** – [Download here](https://www.apnacollege.in/notes?utm_source=chatgpt.com)
+- **Git Cheat Sheet (PDF)** – [Download here](https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/publicFiles/git-cheat-sheet-education.pdf)
 
 ---
 
 ## 🛠️ Git Command Cheat-Sheet
 
 ```bash
-# — Initial Setup
+# Initial Setup
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 
-# — Start or Clone a Repo
+# Start or Clone a Repo
 git init
 git clone <repo-url>
 
-# — Check Status & History
+# Status & History
 git status
 git log
 git log --oneline
 
-# — Staging & Committing
+# Stage & Commit
 git add <file>
 git add .
-git commit -m "Your message"
-git commit -am "msg"   # stage & commit tracked files
+git restore --staged <file>
+git commit -m "Commit message"
+git commit -am "msg"
 
-# — Inspecting Changes
+# Inspect Changes
 git diff
 git diff --staged
 
-# — Remote Operations
+# Remote Operations
 git remote -v
 git remote add origin <url>
 git push -u origin main
-git pull origin <branch>
+git pull origin main
 
-# — Branching & Merging
+# Branching & Merging
 git branch
 git branch <name>
 git checkout <branch>
 git checkout -b <name>
 git merge <branch>
 
-# — Cleaning & Undoing
+# Cleaning & Undoing
 git restore <file>
 git restore --staged <file>
 git reset HEAD~1
 git reset --hard HEAD
 git revert <commit-hash>
 
-# — Branch Management
+# Branch Management
 git branch -d <branch>
 git branch -D <branch>
 git branch -m <old> <new>
 git push origin --delete <branch>
 ```
-````
 
 ---
 
 ## 🔄 Git Workflows
 
-### 1. Remote → Local (Clone & Update)
+### 1. Remote → Local Workflow (Clone & Update)
 
 ```bash
-# Clone remote repository
+# 1. Clone the remote repository
 git clone https://github.com/username/project.git
 cd project
 
-# Work locally
+# 2. Work locally
+# — make edits, add or remove files
 git status
 git add .
 git commit -m "Describe changes"
 
-# Sync with remote
+# 3. Sync changes
 git pull origin main
 git push origin main
 ```
 
-**Steps**
+**Steps:**
 
-1. Clone the repo
+1. Clone to local machine
 2. Edit → Stage → Commit
-3. Pull to get latest changes
+3. Pull latest updates
 4. Push your commits
 
 ---
 
-### 2. Local → Remote (Init & Publish)
+### 2. Local → Remote Workflow (Init & Publish)
 
 ```bash
-# Create new project folder
+# 1. Initialize project folder
 mkdir my-project && cd my-project
 
-# Initialize Git
+# 2. Initialize Git and commit
 git init
-
-# Add files and commit
 touch README.md
 git add .
 git commit -m "Initial commit"
 
-# Link to GitHub & push
+# 3. Link and push to GitHub
 git remote add origin https://github.com/username/my-project.git
 git push -u origin main
 ```
 
-**Steps**
+**Steps:**
 
 1. `git init` in project directory
-2. Stage & commit your work
+2. Stage & commit work
 3. Add remote origin
-4. Push with `-u` to set upstream
+4. Push with upstream set
 
 ---
 
-> **With this single README**, anyone can:
+> **Usage:**
 >
-> - See exactly what you will learn
-> - Download official course notes & cheat sheet
-> - Reference all essential Git commands
-> - Follow two main Git workflows
+> ```bash
+> git add README.md
+> git commit -m "Add consolidated course notes, commands & workflows"
+> git push origin main
+> ```
 
 Happy learning and collaborating! 🚀
-
-```
-
-```
