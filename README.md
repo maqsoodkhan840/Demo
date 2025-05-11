@@ -1,8 +1,8 @@
-# What I Learned — Git & GitHub Course (Apna College)
+# Git & GitHub Course (Apna College)
 
-**Author:** Maqsood Ahmad
-**Repository:** [Git-And-GitHub-Course](https://github.com/maqsoodkhan840/Git-And-GitHub-Course)
-**Repository:** Check[my-first-github-webpage](https://maqsoodkhan840.github.io/my-first-github-webpage/)
+**Author:** Maqsood Ahmad<br>
+**Repository:** [Git-And-GitHub-Course](https://github.com/maqsoodkhan840/Git-And-GitHub-Course)<br>
+**Repository:** Check [my-first-github-webpage](https://maqsoodkhan840.github.io/my-first-github-webpage/)<br>
 
 ---
 
@@ -170,13 +170,5 @@ git push -u origin main
 4. Push with upstream set
 
 ---
-
-> **Usage:**
->
-> ```bash
-> git add README.md
-> git commit -m "Add consolidated course notes, commands & workflows"
-> git push origin main
-> ```
 
 Happy learning and collaborating! 🚀
